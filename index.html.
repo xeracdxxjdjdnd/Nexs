@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Nexus</title>
+
+<style>
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.painel {
+    background: #151515;
+    border: 1px solid #8a00ff;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 350px;
+    margin: 40px auto;
+    box-shadow: 0 0 20px #6200ff55;
+}
+
+h1 { color: #a64dff; }
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #8500ff;
+    color: white;
+    font-size: 16px;
+}
+
+button:active { background: #5000a0; }
+</style>
+</head>
+
+<body>
+<div class="painel">
+<h1>NEXUS PANEL</h1>
+<p>Painel de configurações</p>
+
+<button onclick="ativar('Mira')">Ativar Mira</button>
+<button onclick="ativar('Precisão')">Ativar Precisão</button>
+<button onclick="ativar('Auxílio')">Ativar Auxílio</button>
+
+<p id="status">Status: Desativado</p>
+</div>
+
+<script>
+function ativar(nome) {
+    document.getElementById("status").innerText =
+    nome + ": Ativado no painel";
+}
+</script>
+</body>
+</html>
